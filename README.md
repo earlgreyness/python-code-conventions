@@ -7,16 +7,22 @@
 
 Плохо:
 
-    account = AccountSchema.extract()
-    account = Account.create(account['name'], account['password'])
+```python
+account = AccountSchema.extract()
+account = Account.create(account['name'], account['password'])
+```
 
 Хорошо:
 
-    data = AccountSchema.extract()
-    account = Account.create(data['name'], data['password'])
+```python
+data = AccountSchema.extract()
+account = Account.create(data['name'], data['password'])
+```
 
 Хорошо:
 
-    counter = 0
-    while counter < 10:
-        counter = counter + 2
+```python
+counter = 0
+while counter < 10:
+    counter = counter + 2
+```
