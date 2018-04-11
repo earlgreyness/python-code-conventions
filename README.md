@@ -41,8 +41,8 @@ while counter < 10:
 def clone(self) -> 'Report':
     report = Report()
     report.name = self.name
-    report.filters = self.filters,
-    report.slices = self.slices,
+    report.filters = self.filters
+    report.slices = self.slices
     report.columns = self.columns
     return report
 ```
@@ -54,14 +54,14 @@ def clone(self) -> 'Report':
         name=self.name,
         filters=self.filters,
         slices=self.slices,
-        columns=self.columns,
+        columns=self.columns
     )
 ```
 
 
 ## Закрывающуюся скобку для многострочных выражений ставить на новой строке на вертикальном уровне начала выражения
 
-Мотивация: единообразие стиля в кодовой базе, читаемость (скобки в стиле K&R задают однообразную визуальную структуру), скобка не меняет положения в diff-ах коммитов.
+Мотивация: единообразие стиля в кодовой базе, читаемость (скобки в рациональном стиле K&R задают однообразную хорошо воспринимаемую визуально структуру), скобка не меняет положения в diff-ах коммитов.
 
 Плохо:
 
