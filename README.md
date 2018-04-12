@@ -95,7 +95,7 @@ return Report(
 
 ## Обязательно использовать факт, что пусные коллекции вычисляются в `False` в булевом контексте
 
-Мотивация: PEP8:
+Мотивация: [PEP8](https://www.python.org/dev/peps/pep-0008/#programming-recommendations):
 
 > For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
 
