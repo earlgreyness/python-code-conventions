@@ -91,3 +91,24 @@ return Report(
     columns=self.columns
 )
 ```
+
+
+## Обязательно использовать факт, что пусные коллекции вычисляются в `False` в булевом контексте
+
+Мотивация: PEP8:
+
+> For sequences, (strings, lists, tuples), use the fact that empty sequences are false.
+
+Плохо:
+
+```python
+if len(metric.functions) == 0:
+    db.session.delete(metric)
+```
+
+Хорошо:
+
+```python
+if not metric.functions:
+    db.session.delete(metric)
+```
