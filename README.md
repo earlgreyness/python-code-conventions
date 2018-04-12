@@ -1,6 +1,3 @@
-# python-code-conventions
-
-
 
 # Ценности
 
