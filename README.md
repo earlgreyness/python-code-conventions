@@ -58,7 +58,11 @@ def process():
 
 
 def test_getting_call_ids():
-    assert list(get_call_ies()) == [1, 2, 3]
+    assert list(get_call_ids()) == [1, 2, 3]
+
+
+def test_ids_len_must_be_3():
+    assert len(list(get_call_ids())) == 3
 ```
 
 Хорошо:
@@ -75,7 +79,11 @@ def process():
 
 
 def test_getting_call_ids():
-    assert get_call_ies() == [1, 2, 3]
+    assert get_call_ids() == [1, 2, 3]
+
+
+def test_ids_len_must_be_3():
+    assert len(get_call_ids()) == 3
 ```
 
 
