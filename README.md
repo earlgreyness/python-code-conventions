@@ -40,6 +40,45 @@
 # Смысловые правила
 
 
+### 📖 Соблюдать принцип DRY
+
+Всегда стараемся избегать дублирования кода.
+
+Плохо:
+
+```python
+def get_call_ids():
+    ...
+    return map(lambda x: x.id, query)
+
+
+def process():
+    ids = list(get_call_ids())
+    do_something(ids)
+
+
+def test_getting_call_ids():
+    assert list(get_call_ies()) == [1, 2, 3]
+```
+
+Хорошо:
+
+```python
+def get_call_ids():
+    ...
+    return [x.id for x in query]
+
+
+def process():
+    ids = get_call_ids()
+    do_something(ids)
+
+
+def test_getting_call_ids():
+    assert get_call_ies() == [1, 2, 3]
+```
+
+
 ### 📖 Запрещен неиспользуемый код
 
 Если код можно убрать, и работа системы от этого не изменится, его не должно быть.
