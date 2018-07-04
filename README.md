@@ -411,6 +411,11 @@ result = '[' + key + '_' + value + ']'
 
 Хорошо:
 ```python
+result = '[{}_{}]'.format(key, value)
+```
+
+Лучше:
+```python
 result = '[{key}_{value}]'.format(key=key, value=value)
 ```
 
